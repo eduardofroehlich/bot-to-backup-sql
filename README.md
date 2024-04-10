@@ -21,3 +21,8 @@ Estamos abertos para contribuições que irão ajudar a melhorar o bot.
 
 
 **DEPENDENCY: NODE.JS^v18.18.0**
+
+**LIBS:**
+[Discord.JS](https://github.com/discordjs/guide)
+[Mysqldump](https://github.com/bradzacher/mysqldump)
+[Dotenv](https://github.com/motdotla/dotenv)
