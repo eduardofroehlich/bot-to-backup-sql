@@ -13,7 +13,11 @@ const config = {
     messages: {
         title: "Backup of the database",
         description: "This database file has been saved on ",
-        online: "[ONLINE] The bot is running."
+        online: "[ONLINE] The bot is running.",
+        error: {
+            webhook: "Please enter the webhook url in the config.js file.",
+            connection: "Please enter the connections informations in the config.js file."
+        },
     },
 
     embed: {

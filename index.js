@@ -2,6 +2,16 @@ const { MessageEmbed, WebhookClient } = require('discord.js');
 const mysqldump = require('mysqldump');
 const config = require('./config');
 
+if (config.webhook === "") {
+    console.log('%c' + config.messages.error.webhook, 'color: #FF0000;');
+    return;
+}
+
+if (config.connection.host === "0.0.0.0" || config.connection.user === "" || config.connection.database === "") {
+    console.log('%c' + config.messages.error.connection, 'color: #FF0000;');
+    return;
+}
+
 setInterval(async() => {
     mysqldump({
         connection: {
@@ -33,3 +43,4 @@ setInterval(async() => {
 }, 1000 * 60 * config.time)
 
 console.log(`%c${config.messages.online}`, 'background: green; color: white; display: block;');
+console.log(`%c${config.messages.online}`, 'color: white; background-color: #008000;');
