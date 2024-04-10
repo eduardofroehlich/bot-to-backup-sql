@@ -2,7 +2,7 @@ const { EmbedBuilder, WebhookClient } = require('discord.js');
 const mysqldump = require('mysqldump');
 const config = require('./config');
 
-var hasError = false;
+let hasError = false;
 
 if (config.webhook === "") {
     console.log('%c' + config.messages.error.webhook, 'color: #FF0000;');
