@@ -1,4 +1,4 @@
-const { MessageEmbed, WebhookClient } = require('discord.js');
+const { EmbedBuilder, WebhookClient } = require('discord.js');
 const mysqldump = require('mysqldump');
 const config = require('./config');
 
@@ -32,7 +32,7 @@ if (!hasError) {
         });
 
         let time = Math.round(+new Date() / 1000);
-        const embed = new MessageEmbed()
+        const embed = new EmbedBuilder()
             .setTitle(`${config.messages.title} | ${config.connection.database}`)
             .setColor(config.embed.color)
             .setDescription(`${config.messages.description} <t:${time}>`);
