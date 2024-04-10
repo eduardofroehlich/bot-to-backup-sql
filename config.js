@@ -23,7 +23,7 @@ const config = {
     },
 
     embed: {
-        color: "BLACK"
+        color: 0x0099FF
     }
 }
 
